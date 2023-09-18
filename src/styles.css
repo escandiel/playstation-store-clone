@@ -12,12 +12,23 @@
 }
 
 body {
-  background: rgb(115, 26, 201);
+  /* background: rgb(115, 26, 201);
   background: linear-gradient(
     50deg,
     rgba(26, 84, 201, 0.9878151944371498) 7%,
     rgba(3, 42, 135, 1) 100%
-  );
+  ); */
+  background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 a {

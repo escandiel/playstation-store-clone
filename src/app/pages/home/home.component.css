@@ -1,10 +1,65 @@
-.home__container {
-  width: 90%;
-  margin: auto;
-  padding-top: 52px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+.home-container {
+  width: 100%;
+  /* margin: auto; */
+  /* padding-top: 52px; */
+  /* display: flex;
+  justify-content: space-around; */
+  /* align-items: baseline; */
+  /* flex-wrap: wrap; */
+  /* border: 1px solid white; */
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  /* border: 4px solid white; */
+  background-color: transparent;
+  padding-top: 24px;
+}
+
+.img-container > img {
+  width: 100%;
+}
+
+.span-container {
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
-  flex-wrap: wrap;
-  border: 1px solid white;
+  /* padding-left: 24px; */
+  /* margin-right: auto; */
+}
+
+.span-container > span {
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.span-container > button {
+  /* width: 100px; */
+  height: 60px;
+  padding-left: 24px;
+  padding-right: 24px;
+  /* height: 80px; */
+  border-radius: 32px;
+  background-color: #0070cc;
+}
+
+.span-container > button:hover {
+  background-color: #0059a7; /* Nova cor de fundo quando o mouse passa sobre o botão */
+  color: #fff; /* Nova cor do texto quando o mouse passa sobre o botão */
+}
+
+.btn-action {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: 0.4px;
+  color: white;
 }
