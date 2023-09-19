@@ -31,7 +31,7 @@
 
 .span-container > span {
   margin-top: 48px;
-  margin-left: 86px;
+  margin-left: 92px;
   font-family: "Poppins";
   font-size: 48px;
   font-weight: 400;
@@ -40,7 +40,7 @@
 
 .span-container > button {
   margin-top: 48px;
-  margin-right: 86px;
+  margin-right: 92px;
   height: 60px;
   padding-left: 16px;
   padding-right: 16px;
@@ -71,4 +71,22 @@
   margin: auto;
   width: 99%;
   height: 100%;
+}
+
+@media (max-width: 1600px) {
+  .span-container > span {
+    margin-top: 48px;
+    margin-left: 36px;
+    font-size: 32px;
+  }
+
+  .span-container > button {
+    margin-top: 48px;
+    margin-right: 36px;
+    height: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 32px;
+    background-color: #0070cc;
+  }
 }
