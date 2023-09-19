@@ -1,0 +1,15 @@
+.game-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px;
+}
+.game-card,
+.game-card > img {
+  width: 415px;
+  height: 415px;
+  /* border: 1px solid black; */
+  border-radius: 8px;
+}
