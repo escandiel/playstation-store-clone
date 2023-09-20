@@ -82,3 +82,9 @@ a {
 .dev-profile-actions {
   color: #000;
 }
+
+@media (max-width: 1600px) {
+  .menu__bar_action {
+    font-size: 14px;
+  }
+}

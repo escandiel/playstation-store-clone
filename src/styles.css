@@ -1,5 +1,5 @@
 @import url(https://db.onlinewebfonts.com/c/6e0aa675bbc1061803aaef4f66550e49?family=SST+W20+Medium);
-
+@import url(https://db.onlinewebfonts.com/c/8ccb0d14738c40917315dcc3852a8f39?family=SST+W20+Roman);
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +9,7 @@
 
 :root {
   --primary-font: "SST W20 Medium";
+  --secondary-font: "SST W20 Roman";
 }
 
 body {

@@ -1,5 +1,9 @@
+ul {
+  list-style: none;
+}
+
 .footer {
-  height: 40%;
+  height: 80vh;
   border: 1px solid black;
   background-color: #003697;
   color: white;
@@ -16,4 +20,16 @@
   gap: 24px;
   justify-content: space-between;
   padding: 24px;
+  width: 80%;
+}
+
+.footer-action {
+  display: flex;
+  padding-top: 16px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  font-family: var(--secondary-font);
 }
