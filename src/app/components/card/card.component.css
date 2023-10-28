@@ -11,6 +11,7 @@
   width: 415px;
   height: 415px;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .game-card img {
