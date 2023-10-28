@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TopHeaderComponent } from './components/top-header/top-header.component';
+import { CardsSmallComponent } from './components/cards-small/cards-small.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TopHeaderComponent } from './components/top-header/top-header.component
     CardComponent,
     FooterComponent,
     TopHeaderComponent,
+    CardsSmallComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

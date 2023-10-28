@@ -1,0 +1,10 @@
+.small-cards-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.small-card-img {
+  width: 269px;
+  height: 269px;
+  border-radius: 16px;
+}
