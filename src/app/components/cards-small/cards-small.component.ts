@@ -9,9 +9,24 @@ import { data } from 'src/app/data/dataFake';
 export class CardsSmallComponent implements OnInit {
   @Input()
   public title: string = '';
-  smallCardImages: string[] = data.slice(1, 7).map((item) => item.img);
+  smallCardImages: string[] = []; //data.slice(1, 7).map((item) => item.img);
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const startIndex = 1;
+    this.smallCardImages = this.getRandomImages(data.slice(startIndex), 6);
+  }
+
+  getRandomImages(data: any[], count: number): string[] {
+    const randomImages = [];
+
+    const dataLength = data.length;
+
+    while (randomImages.length < count) {
+      const randomIndex = Math.floor(Math.random() * dataLength);
+      randomImages.push(data[randomIndex].img);
+    }
+    return randomImages;
+  }
 }
