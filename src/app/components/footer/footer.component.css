@@ -2,19 +2,29 @@ ul {
   list-style: none;
 }
 
+a {
+  padding: 12px;
+}
+
 .footer {
-  height: 80vh;
+  height: 60%;
   border: 1px solid black;
   background-color: #003697;
   color: white;
-  padding: 24px;
+  padding: 56px;
+  margin-top: 56px;
 }
 
-.footer-action {
-  text-decoration: none;
-  color: white;
+.footer-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  /* gap: 48px; */
+  margin-left: 32px;
 }
-
+.span-region {
+  font-size: 1.2rem;
+}
 .ul-container {
   display: flex;
   gap: 24px;
@@ -28,7 +38,8 @@ ul {
   padding-top: 16px;
   text-decoration: none;
   color: white;
-  font-size: 14px;
+  line-height: 1.25;
+  font-size: 1.2rem;
   line-height: 16px;
   font-weight: 400;
   font-family: var(--secondary-font);

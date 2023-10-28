@@ -10,8 +10,17 @@
 .game-card > img {
   width: 415px;
   height: 415px;
-  /* border: 1px solid black; */
   border-radius: 8px;
+}
+
+.game-card img {
+  opacity: 1;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+.game-card:hover img {
+  opacity: 0.9;
+  background-color: black;
 }
 
 @media (max-width: 1600px) {
@@ -23,5 +32,17 @@
 
   .game-card-none-mobile {
     display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .game-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .game-card,
+  .game-card > img {
+    width: 190px;
+    height: 190px;
   }
 }

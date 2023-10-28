@@ -23,6 +23,11 @@
   width: 100%;
 }
 
+.banner-img-home {
+  width: 100%;
+  height: 80%;
+}
+
 .span-container {
   display: flex;
   justify-content: space-between;
