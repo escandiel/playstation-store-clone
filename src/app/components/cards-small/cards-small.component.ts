@@ -23,9 +23,16 @@ export class CardsSmallComponent implements OnInit {
 
     const dataLength = data.length;
 
+    const usedIndex = new Set<number>();
+
     while (randomImages.length < count) {
       const randomIndex = Math.floor(Math.random() * dataLength);
-      randomImages.push(data[randomIndex].img);
+
+      //verifica se o index ja foi usado
+      if (!usedIndex.has(randomIndex)) {
+        usedIndex.add(randomIndex);
+        randomImages.push(data[randomIndex].img);
+      }
     }
     return randomImages;
   }

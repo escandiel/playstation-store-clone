@@ -59,4 +59,28 @@ export const data = [
     id: '14',
     img: 'https://image.api.playstation.com/vulcan/ap/rnd/202307/2416/9fb7d209dbb62357ddd5c305f6019a97238fc1bd1b540560.png?w=440&thumb=false',
   },
+  {
+    id: '15',
+    img: 'https://image.api.playstation.com/vulcan/ap/rnd/202305/1610/a63668c38fbe4c31f62d77a2863300dcf26c3e50576d75e2.png?w=440&thumb=false',
+  },
+  {
+    id: '16',
+    img: 'https://image.api.playstation.com/vulcan/ap/rnd/202309/1110/e720726e7f33d828259e12d7c49aff85f2ff7581db6521fd.png?w=440&thumb=false',
+  },
+  {
+    id: '17',
+    img: 'https://image.api.playstation.com/vulcan/ap/rnd/202310/2310/5a35732340d8b2927776b942e467d05995974594ef6af94b.png?w=440&thumb=false',
+  },
+  {
+    id: '18',
+    img: 'https://image.api.playstation.com/vulcan/ap/rnd/202309/2601/341f2c79372601fc3848a46e8f2c8d57d0f2b8592a4585ea.png?w=440&thumb=false',
+  },
+  {
+    id: '19',
+    img: 'https://image.api.playstation.com/vulcan/ap/rnd/202308/2212/eb6f7af954b83db7cc5a4c3c18d500fc4521f6b0a35df7e0.png?w=440&thumb=false',
+  },
+  {
+    id: '20',
+    img: 'https://image.api.playstation.com/vulcan/ap/rnd/202306/0113/38ad0cc5b92af440d46ccebf5d1f271213d656684fce3385.png?w=440&thumb=false',
+  },
 ];
