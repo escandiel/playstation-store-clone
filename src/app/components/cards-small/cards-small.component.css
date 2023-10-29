@@ -37,7 +37,8 @@
   background-color: black;
 }
 
-.priceSpan {
+.priceSpan,
+.nameSpan {
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -47,4 +48,10 @@
   line-height: 1.4;
   color: rgb(59, 59, 59);
   margin: 0.5em 0.2em;
+}
+
+.nameSpan {
+  color: black;
+  cursor: pointer;
+  font-family: var(--secondary-font);
 }

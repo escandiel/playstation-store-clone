@@ -8,27 +8,30 @@ import { Faker, fakerDE as faker } from '@faker-js/faker';
   styleUrls: ['./cards-small.component.css'],
 })
 export class CardsSmallComponent implements OnInit {
+  public gameName: string[] = [];
+  public Id: string = '0';
   @Input()
   public title: string = ''; //title do component inputavel
   @Input()
   public showPriceSpan: boolean = false; //Define se o priceSpan deve ser mostrado
   @Input()
   public isFreeGame: boolean = false; //Define se o jogo é gratuito
-  public priceSpan: string[] = []; //Array para guardar preços ou "gratuito"
+  public cardPrice: string[] = []; //Array para guardar preços ou "gratuito"
   public smallCardImages: string[] = []; // Array para armazenar URLs das imagens
   public numberOfCardsToDisplay: number = 6; //Numero padrao de cards para exibiçao
+  public smallCards: any[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
     const startIndex = 1;
     this.updateNumCards(); //Atualiza o num de cards com base no tamanho da tela
-
-    this.smallCardImages = this.getRandomImages(
+    this.smallCards = this.getRandomSmallCards(
       data.slice(startIndex),
       this.numberOfCardsToDisplay
-    ); //Obtem imagens aleatorias para os cards
-    this.priceSpan = this.getMarketPrices(this.numberOfCardsToDisplay);
+    );
+
+    this.cardPrice = this.getMarketPrices(this.numberOfCardsToDisplay);
   }
 
   //Atualiza numero cards com base no tamanho da tela
@@ -47,25 +50,19 @@ export class CardsSmallComponent implements OnInit {
     this.updateNumCards(); //Chama a func de atualizaçao ao redimensionar
   }
 
-  //Obtem imagens aleatorias dos cards a partirs dos dados fornecidos
-  getRandomImages(data: any[], count: number): string[] {
-    const randomImages = []; //Cria um array vazio do tipo any
+  getRandomSmallCards(data: any[], count: number): any[] {
+    const getRandomSmallCards = [];
+    const dataLength = data.length;
+    const usedIndex = new Set<number>();
 
-    const dataLength = data.length; //Constante recebe a length de data
-
-    const usedIndex = new Set<number>(); //Constante recebe um Set do tipo number
-
-    while (randomImages.length < count) {
-      const randomIndex = Math.floor(Math.random() * dataLength); //Atribui um Index randomico a const randomIndex
-
-      //verifica se o index ja foi usado
+    while (getRandomSmallCards.length < count) {
+      const randomIndex = Math.floor(Math.random() * dataLength);
       if (!usedIndex.has(randomIndex)) {
         usedIndex.add(randomIndex);
-        randomImages.push(data[randomIndex].img);
+        getRandomSmallCards.push(data[randomIndex]);
       }
     }
-
-    return randomImages;
+    return getRandomSmallCards;
   }
 
   //gera preços aleatorios ou "gratuito" para os cards

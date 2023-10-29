@@ -50,6 +50,7 @@
   padding-right: 16px;
   border-radius: 32px;
   background-color: #0070cc;
+  cursor: pointer;
 }
 
 .span-container > button:hover {
