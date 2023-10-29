@@ -9,7 +9,7 @@ export class TopHeaderComponent implements OnInit {
   @Input()
   isVisible: boolean = true;
   @HostListener('window:scroll', ['$event'])
-  onScroll(event: any) {
+  onScroll(_: any) {
     //Verifica a posicao de scroll e atualiza a view do top header
     if (window.scrollY > 100) {
       this.isVisible = false; //Esconde o top header apos scroll

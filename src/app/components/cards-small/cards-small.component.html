@@ -1,7 +1,11 @@
 <h1 class="small-card-title">{{ title }}</h1>
 
 <div class="small-cards-container">
-  <div class="small-card" *ngFor="let imgSrc of smallCardImages">
+  <div class="small-card" *ngFor="let imgSrc of smallCardImages; let i = index">
     <img class="small-card-img" [src]="imgSrc" alt="" />
+    <span class="priceSpan" *ngIf="showPriceSpan && !isFreeGame">{{
+      priceSpan[i]
+    }}</span>
+    <span class="priceSpan" *ngIf="!showPriceSpan && isFreeGame">Gratuito</span>
   </div>
 </div>

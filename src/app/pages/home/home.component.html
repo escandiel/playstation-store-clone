@@ -17,8 +17,16 @@
     <app-card></app-card>
     <app-cards-small title="10 melhores jogos no seu país"></app-cards-small>
     <app-cards-small title="Novos jogos"></app-cards-small>
-    <app-cards-small title="Pré-venda"></app-cards-small>
-    <app-cards-small title="Demonstrações"></app-cards-small>
+    <app-cards-small
+      title="Pré-venda"
+      [showPriceSpan]="true"
+      [isFreeGame]="false"
+    ></app-cards-small>
+    <app-cards-small
+      title="Demonstrações"
+      [isFreeGame]="true"
+      [showPriceSpan]="false"
+    ></app-cards-small>
   </div>
 
   <div class="img-container">

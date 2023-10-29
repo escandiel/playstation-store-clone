@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { data } from 'src/app/data/dataFake';
+import { Faker, fakerDE as faker } from '@faker-js/faker';
 
 @Component({
   selector: 'app-cards-small',
@@ -9,24 +10,30 @@ import { data } from 'src/app/data/dataFake';
 export class CardsSmallComponent implements OnInit {
   @Input()
   public title: string = '';
-  smallCardImages: string[] = []; //data.slice(1, 7).map((item) => item.img);
+  @Input()
+  public showPriceSpan: boolean = false;
+  @Input()
+  public isFreeGame: boolean = false;
+  public priceSpan: string[] = [];
+  smallCardImages: string[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
     const startIndex = 1;
-    this.smallCardImages = this.getRandomImages(data.slice(startIndex), 6);
+    this.smallCardImages = this.getRandomImages(data.slice(startIndex), 6); //Instancia de smallcard recebe a lõgica da func getRandomImages
+    this.priceSpan = this.getMarketPrices(6);
   }
 
   getRandomImages(data: any[], count: number): string[] {
-    const randomImages = [];
+    const randomImages = []; //Cria um array vazio do tipo any
 
-    const dataLength = data.length;
+    const dataLength = data.length; //Constante recebe a length de data
 
-    const usedIndex = new Set<number>();
+    const usedIndex = new Set<number>(); //Constante recebe um Set do tipo number
 
     while (randomImages.length < count) {
-      const randomIndex = Math.floor(Math.random() * dataLength);
+      const randomIndex = Math.floor(Math.random() * dataLength); //Atribui um Index randomico a const
 
       //verifica se o index ja foi usado
       if (!usedIndex.has(randomIndex)) {
@@ -35,5 +42,19 @@ export class CardsSmallComponent implements OnInit {
       }
     }
     return randomImages;
+  }
+
+  getMarketPrices(count: number): string[] {
+    const values: string[] = [];
+    for (let i = 0; i < count; i++) {
+      const isMarketPrice = Math.random() < 0.5;
+
+      if (isMarketPrice) {
+        values.push('R$ ' + faker.commerce.price());
+      } else {
+        values.push('Gratuito');
+      }
+    }
+    return values;
   }
 }
