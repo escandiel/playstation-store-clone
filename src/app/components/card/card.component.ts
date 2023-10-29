@@ -7,10 +7,6 @@ import { data } from 'src/app/data/dataFake';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  // photoCover: string = '/assets/spider-man-2.png';
-
-  // @Input()
-  // photoCover: string = '';
   @Input()
   Id: string = '0';
   cardData: any;
@@ -19,13 +15,10 @@ export class CardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    // this.cardData = data.find((item) => item.id === this.Id);
-    // this.updateCardData();
     this.updateNumCards();
   }
 
   //Atualiza numero cards com base na screen size
-
   updateNumCards() {
     if (window.innerWidth < 1400) {
       this.numCards = 6;
