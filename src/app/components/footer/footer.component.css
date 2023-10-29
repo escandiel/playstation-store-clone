@@ -6,6 +6,10 @@ a {
   padding: 12px;
 }
 
+a:hover {
+  color: rgba(224, 224, 224, 0.735);
+}
+
 .footer {
   height: 60%;
   border: 1px solid black;
@@ -39,7 +43,7 @@ a {
   text-decoration: none;
   color: white;
   line-height: 1.25;
-  font-size: 1.2rem;
+  font-size: 18px;
   line-height: 16px;
   font-weight: 400;
   font-family: var(--secondary-font);

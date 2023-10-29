@@ -15,7 +15,7 @@
 .small-card-img {
   width: 269px;
   height: 269px;
-  border-radius: 16px;
+  border-radius: 14px;
   cursor: pointer;
 
   -webkit-transform: scale(1);
@@ -30,8 +30,10 @@
 
 .small-card-img:hover {
   -webkit-transform: scale(1);
+  padding: 4px;
+  box-sizing: border-box;
   transform: scale(1);
-  border-radius: 16px;
+  /* border-radius: 8px; */
   border: 2px solid rgba(15, 2, 190, 0.7);
   opacity: 0.9;
   background-color: black;
@@ -54,4 +56,20 @@
   color: black;
   cursor: pointer;
   font-family: var(--secondary-font);
+}
+
+@media (max-width: 1600px) {
+  .small-cards-container {
+    gap: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .small-cards-container {
+    gap: 16px;
+  }
+  .small-card-img {
+    width: 160px;
+    height: 160px;
+  }
 }
