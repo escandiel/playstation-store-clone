@@ -51,15 +51,15 @@ export class CardsSmallComponent implements OnInit {
   }
 
   getRandomSmallCards(data: any[], count: number): any[] {
-    const getRandomSmallCards = [];
-    const dataLength = data.length;
-    const usedIndex = new Set<number>();
+    const getRandomSmallCards = []; //Array vazio para armazenar os cards randomicos
+    const dataLength = data.length; //Calcula o length do array
+    const usedIndex = new Set<number>(); //Cria um conjuto para rastrear os index usados
 
     while (getRandomSmallCards.length < count) {
-      const randomIndex = Math.floor(Math.random() * dataLength);
+      const randomIndex = Math.floor(Math.random() * dataLength); //Gera um index randomico
       if (!usedIndex.has(randomIndex)) {
-        usedIndex.add(randomIndex);
-        getRandomSmallCards.push(data[randomIndex]);
+        usedIndex.add(randomIndex); //Adiciona o index ao conjunto de usedIndex
+        getRandomSmallCards.push(data[randomIndex]); //Adiciona os dados do card ao Array de cards randomicos
       }
     }
     return getRandomSmallCards;
